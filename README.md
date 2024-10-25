@@ -27,25 +27,22 @@ This repository serves as a template for building projects or extensions based o
 
 ```bash
 # Option 1: HTTPS
-git clone https://github.com/isaac-sim/IsaacLabExtensionTemplate.git
-
-# Option 2: SSH
-git clone git@github.com:isaac-sim/IsaacLabExtensionTemplate.git
+git clone https://github.com/rayloveme/isaac_ray.git
 ```
 
-- Throughout the repository, the name `ext_template` only serves as an example and we provide a script to rename all the references to it automatically:
+- Throughout the repository, the name `IsaacRay` only serves as an example and we provide a script to rename all the references to it automatically:
 
 ```bash
 # Enter the repository
 cd IsaacLabExtensionTemplate
-# Rename all occurrences of ext_template (in files/directories) to your_fancy_extension_name
+# Rename all occurrences of IsaacRay (in files/directories) to your_fancy_extension_name
 python scripts/rename_template.py your_fancy_extension_name
 ```
 
 - Using a python interpreter that has Isaac Lab installed, install the library
 
 ```bash
-python -m pip install -e exts/ext_template
+python -m pip install -e exts/IsaacRay
 ```
 
 - Verify that the extension is correctly installed by running the following command:
@@ -64,7 +61,7 @@ If everything executes correctly, it should create a file .python.env in the `.v
 
 ### Setup as Omniverse Extension (Optional)
 
-We provide an example UI extension that will load upon enabling your extension defined in `exts/ext_template/ext_template/ui_extension_example.py`. For more information on UI extensions, enable and check out the source code of the `omni.isaac.ui_template` extension and refer to the introduction on [Isaac Sim Workflows 1.2.3. GUI](https://docs.omniverse.nvidia.com/isaacsim/latest/introductory_tutorials/tutorial_intro_workflows.html#gui).
+We provide an example UI extension that will load upon enabling your extension defined in `exts/IsaacRay/IsaacRay/ui_extension_example.py`. For more information on UI extensions, enable and check out the source code of the `omni.isaac.ui_template` extension and refer to the introduction on [Isaac Sim Workflows 1.2.3. GUI](https://docs.omniverse.nvidia.com/isaacsim/latest/introductory_tutorials/tutorial_intro_workflows.html#gui).
 
 To enable your extension, follow these steps:
 
@@ -177,7 +174,7 @@ In some VsCode versions, the indexing of part of the extensions is missing. In t
 ```json
 {
     "python.analysis.extraPaths": [
-        "<path-to-ext-repo>/exts/ext_template"
+        "<path-to-ext-repo>/exts/IsaacRay"
     ]
 }
 ```
