@@ -42,6 +42,11 @@ def main():
             table.add_row([index + 1, task_spec.id, task_spec.entry_point, task_spec.kwargs["env_cfg_entry_point"]])
             # increment count
             index += 1
+        if "IsaacRay-" in task_spec.id:
+            # add details to table
+            table.add_row([index + 1, task_spec.id, task_spec.entry_point, task_spec.kwargs["env_cfg_entry_point"]])
+            # increment count
+            index += 1
 
     print(table)
 
