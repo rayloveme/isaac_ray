@@ -105,6 +105,7 @@ def main():
             obs, _, _, _ = env.step(actions)
             if args_cli.teleop_device is not None:
                 target = teleop_interface.advance()
+
                 # print(target)
             obs[:,9:12] = torch.tensor(target,dtype=torch.float32)
         if args_cli.video:

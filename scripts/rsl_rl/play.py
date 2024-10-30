@@ -108,16 +108,9 @@ def main():
         # run everything in inference mode
         with torch.inference_mode():
             # agent stepping
-            print(f"observation of commands : {obs}")
-            #找出obs中和[3,0,0]最接近的一段
-
             actions = policy(obs)
             # env stepping
             obs, _, _, _ = env.step(actions)
-            # TODO 更改command
-            # 10 是顺时针旋转 11 是逆时针旋转 12 是往上？
-            # 还是应该从command manager入手
-            obs[:,9:12] = torch.tensor([2,0,0],dtype=torch.float32)
         if args_cli.video:
             timestep += 1
             # Exit the play loop after recording one video
